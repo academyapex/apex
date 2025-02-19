@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apex Academy</title>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Bebas Neue', sans-serif;
+        }
+
+        body {
+            background-color: #121212;
+            color: white;
+            text-align: center;
+        }
+
+        /* Loading screen */
+        #loading-screen {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            background: black;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+        }
+
+        #loading-screen img {
+            width: 150px;
+            height: auto;
+        }
+
+        #loading-text {
+            font-size: 32px;
+            color: rgb(254, 9, 66);
+            white-space: nowrap;
+            overflow: hidden;
+            border-right: 2px solid rgb(254, 9, 66);
+            width: 0;
+            animation: typing 2s steps(15, end) forwards, blink 0.5s step-end infinite alternate;
+        }
+
+        @keyframes typing {
+            to {
+                width: 200px;
+            }
+        }
+
+        @keyframes blink {
+            50% {
+                border-color: transparent;
+            }
+        }
+
+        header {
+            background: rgb(254, 9, 66);
+            padding: 15px;
+            text-align: center;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            padding: 10px;
+        }
+
+        nav ul li {
+            position: relative;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-size: 18px;
+            padding: 10px;
+        }
+
+        .dropdown {
+            display: none;
+            position: absolute;
+            background: rgb(254, 9, 66);
+            padding: 10px;
+        }
+
+        nav ul li:hover .dropdown {
+            display: block;
+        }
+
+        .hero-image {
+            background-image: url("Img/Gallery/2.jpg");
+            height: 100vh;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            position: relative;
+        }
+
+        .hero-text {
+            text-align: center;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+        }
+
+        .hero-text button {
+            border: none;
+            outline: 0;
+            display: inline-block;
+            padding: 10px 25px;
+            color: black;
+            background-color: #ddd;
+            text-align: center;
+            cursor: pointer;
+        }
+
+        .hero-text button:hover {
+            background-color: #555;
+            color: white;
+        }
+
+        .scrolling-thumbnails {
+            display: flex;
+            overflow-x: auto;
+            gap: 10px;
+            padding: 10px;
+            scrollbar-width: none;
+            -ms-overflow-style: none;
+        }
+
+        .scrolling-thumbnails::-webkit-scrollbar {
+            display: none;
+        }
+
+        .scrolling-thumbnails img {
+            width: 450px;
+            height: 300px;
+            border-radius: 10px;
+            transition: transform 0.3s;
+        }
+
+        .scrolling-thumbnails img:hover {
+            transform: scale(1.1);
+        }
+
+        footer {
+            margin-top: 20px;
+            padding: 15px;
+            background: rgb(254, 9, 66);
+        }
+
+        #main-content {
+            display: none;
+        }
+        .ic1{
+            width: 5%;
+        }
+    </style>
+</head>
+
+<body>
+    <section id="home" class="fade-in">
+        <div id="loading-screen">
+            <img src="Img/apexlogo.png" alt="Apex Logo">
+            <div id="loading-text">Apex Academy</div>
+        </div>
+        <div id="main-content">
+            <div class="hero-image">
+                <div class="hero-text">
+                    <h1>Welcome to Apex Academy</h1>
+                    <p>Your gateway to learning and innovation.</p>
+                    <button>Enroll Now</button>
+                </div>
+            </div>
+    </section>
+    <header>Apex Academy</header>
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li>
+                <a href="#courses">Courses</a>
+                <div class="dropdown">
+                    <a href="#class5-7">ALL SUBJECT</a>
+                    <a href="#icse8-10">COMPUTER</a>
+                    <a href="#cbse9-12">ART & CRAFT</a>
+                </div>
+            </li>
+            <li>
+                <a href="#gallery">Gallery</a>
+                <div class="dropdown">
+                    <a href="#art">SARASWATI PUJA 2025</a>
+                    <a href="#student-projects">ART GALLERY</a>
+                    <a href="#events">Events</a>
+                </div>
+            </li>
+            <li><a href="#mentors">Mentors</a></li>
+            <!-- <li><a href="#about">About Us</a></li>
+            <li><a href="#news">News</a></li> -->
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+    <section id="home" class="fade-in">
+        <div class="scrolling-thumbnails">
+            <img src="Img/Gallery/1.jpg" alt="Thumbnail 1">
+            <img src="Img/Gallery/3.jpg" alt="Thumbnail 2">
+            <img src="Img/Gallery/logo3d (4).jpg" alt="Thumbnail 3">
+            <img src="Img/Gallery/ADV (3).jpg" alt="Thumbnail 3">
+        </div>
+
+    </section>
+
+    <section id="courses" class="fade-in">
+        <h2>Courses</h2>
+        <h2>Our Course</h2>
+        <div class="scrolling-thumbnails">
+            <img src="Img/Course/C (1).jpg" alt="Gallery">
+            <img src="Img/Course/C (2).jpg" alt="Gallery">
+            <img src="Img/Course/C (3).jpg" alt="Gallery">
+            <img src="Img/Course/C (4).jpg" alt="Gallery">
+            <img src="Img/Course/C (5).jpg" alt="Gallery">
+            <img src="Img/Course/C (6).jpg" alt="Gallery">
+        </div>
+        <div class="scrolling-thumbnails">
+            <img src="Img/Course/C (7).jpg" alt="Gallery">
+            <img src="Img/Course/C (8).jpg" alt="Gallery">
+            <img src="Img/Course/C (9).jpg" alt="Gallery">
+            <img src="Img/Course/C (10).jpg" alt="Gallery">
+            <img src="Img/Course/C (11).jpg" alt="Gallery">
+        </div>
+    </section>
+
+    <section id="gallery" class="fade-in">
+        <h2>Gallery</h2>
+        <div class="scrolling-thumbnails">
+            <img src="Img/Gallery/SP (3).jpg" alt="Gallery">
+            <img src="Img/Gallery/SP (2).jpg" alt="Gallery">
+            <img src="Img/Gallery/SP (1).jpg" alt="Gallery">
+            <img src="Img/Gallery/SP (4).jpg" alt="Gallery">
+        </div>
+        <div class="scrolling-thumbnails">
+            <img src="Img/Gallery/SV (1).jpg" alt="Gallery">
+            <img src="Img/Gallery/SV (2).jpg" alt="Gallery">
+            <img src="Img/Gallery/SV (3).jpg" alt="Gallery">
+            <img src="Img/Gallery/SV (4).jpg" alt="Gallery">
+            <img src="Img/Gallery/SV (5).jpg" alt="Gallery">
+            <img src="Img/Gallery/SV (6).jpg" alt="Gallery">
+            <img src="Img/Gallery/SV (7).jpg" alt="Gallery">
+            <img src="Img/Gallery/SV (8).jpg" alt="Gallery">
+            <img src="Img/Gallery/SV (9).jpg" alt="Gallery">
+        </div>
+        <h2>Art Gallery</h2>
+        <div class="scrolling-thumbnails">
+            <img src="Img/Gallery/D14.jpg" alt="Gallery">
+            <img src="Img/Gallery/D1.jpg" alt="Gallery">
+            <img src="Img/Gallery/D2.jpg" alt="Gallery">
+            <img src="Img/Gallery/D3.jpg" alt="Gallery">
+            <img src="Img/Gallery/D4.jpg" alt="Gallery">
+            <img src="Img/Gallery/D5.jpg" alt="Gallery">
+            <img src="Img/Gallery/D6.jpg" alt="Gallery">
+        </div>
+        <div class="scrolling-thumbnails">
+            <img src="Img/Gallery/D7.jpg" alt="Gallery">
+            <img src="Img/Gallery/D8.jpg" alt="Gallery">
+            <img src="Img/Gallery/D9.jpg" alt="Gallery">
+            <img src="Img/Gallery/D10.jpg" alt="Gallery">
+            <img src="Img/Gallery/D11.jpg" alt="Gallery">
+            <img src="Img/Gallery/D12.jpg" alt="Gallery">
+            <img src="Img/Gallery/D13.jpg" alt="Gallery">
+        </div>
+    </section>
+    <section id="mentors" class="fade-in">
+        <h2>Mentors</h2>
+        <div class="scrolling-thumbnails">
+            <div>
+                <img src="mentor1.jpg" alt="Mentor 1">
+                <p>APARUPA NAG</p>
+            </div>
+            <div>
+                <img src="mentor2.jpg" alt="Mentor 2">
+                <p>MANOJ NAG</p>
+            </div>
+            <div>
+                <img src="mentor3.jpg" alt="Mentor 3">
+                <p>PRIYA DHIBAR</p>
+            </div>
+            <div>
+                <img src="mentor4.jpg" alt="Mentor 4">
+                <p>PAROMITA SAHO</p>
+            </div>
+            <div>
+                <img src="mentor5.jpg" alt="Mentor 5">
+                <p>ABIR CHATTERJEE</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="fade-in">
+        <h2>Contact Us</h2>
+        <div class="social-icons">
+            <a href="#"><img class="ic1" src="Img/icon/facebook.png" alt="Facebook"></a>
+            <!-- <a href="#"><img src="twitter.png" alt="Twitter"></a> -->
+            <a href="#"><img class="ic1" src="Img/icon/instagram.png" alt="Instagram"></a>
+        </div>
+        <p>Email: apexacademy.asansol@gmail.com</p>
+        <p>Phone: +91 62957 65839</p>
+    </section>
+
+    <footer>&copy; 2025 Apex Academy. All Rights Reserved.</footer>
+    </div>
+    <script>
+        window.addEventListener("load", function () {
+            setTimeout(() => {
+                document.getElementById("loading-screen").style.display = "none";
+                document.getElementById("main-content").style.display = "block";
+            }, 2500);
+        });
+    </script>
+</body>
+
+</html>
