@@ -168,6 +168,15 @@
         .ic1{
             width: 5%;
         }
+        .lazy {
+  filter: blur(10px);
+  transition: filter 0.5s ease-in-out;
+}
+
+.lazy.loaded {
+  filter: blur(0);
+}
+
     </style>
 </head>
 
@@ -327,6 +336,25 @@
                 document.getElementById("main-content").style.display = "block";
             }, 2500);
         });
+
+
+        document.addEventListener("DOMContentLoaded", function () {
+  const images = document.querySelectorAll(".lazy");
+
+  const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        const img = entry.target;
+        img.src = img.dataset.src; // Replace with high-quality image
+        img.classList.add("loaded");
+        observer.unobserve(img);
+      }
+    });
+  });
+
+  images.forEach((img) => observer.observe(img));
+});
+
     </script>
 </body>
 
