@@ -168,41 +168,11 @@
         .ic1{
             width: 5%;
         }
-        .lazy {
-  filter: blur(10px);
-  transition: filter 0.5s ease-in-out;
-}
+
 
 .lazy.loaded {
   filter: blur(0);
 }
-.hero-video {
-    position: relative;
-    width: 100%;
-    height: 100vh;
-    overflow: hidden;
-}
-
-.hero-video video {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.hero-text {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: white;
-    text-align: center;
-    z-index: 1;
-}
-
 
     </style>
 </head>
@@ -213,26 +183,14 @@
             <img src="apexlogo.png" alt="Apex Logo" loading="eager">
             <div id="loading-text">Apex Academy</div>
         </div>
-        <!-- <div id="main-content">
+        <div id="main-content">
             <div class="hero-image">
                 <div class="hero-text">
                     <h1>Welcome to Apex Academy</h1>
                     <p>Your gateway to learning and innovation.</p>
                     <button>Enroll Now</button>
                 </div>
-            </div> -->
-            <div class="hero-video">
-                <video autoplay loop muted playsinline>
-                    <source src="your-video.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
-                <div class="hero-text">
-                    <h1>Welcome to Apex Academy</h1>
-                    <p>Your gateway to learning and innovation.</p>
-                    <button>Enroll Now</button>
-                </div>
             </div>
-            
     </section>
     <header>Apex Academy</header>
     <nav>
@@ -329,7 +287,7 @@
             <img src="Img/Gallery/D13.jpg" alt="Gallery" loading="lazy">
         </div>
     </section>
-    <section id="mentors" class="fade-in">
+    <!-- <section id="mentors" class="fade-in">
         <h2>Mentors</h2>
         <div class="scrolling-thumbnails">
             <div>
@@ -353,7 +311,7 @@
                 <p>ABIR CHATTERJEE</p>
             </div>
         </div>
-    </section>
+    </section> -->
 
     <section id="contact" class="fade-in">
         <h2>Contact Us</h2>
@@ -376,23 +334,6 @@
             }, 2500);
         });
 
-
-        document.addEventListener("DOMContentLoaded", function () {
-  const images = document.querySelectorAll(".lazy");
-
-  const observer = new IntersectionObserver((entries, observer) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        const img = entry.target;
-        img.src = img.dataset.src; // Replace with high-quality image
-        img.classList.add("loaded");
-        observer.unobserve(img);
-      }
-    });
-  });
-
-  images.forEach((img) => observer.observe(img));
-});
 
     </script>
 </body>
