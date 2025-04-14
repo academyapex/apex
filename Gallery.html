@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Apex Academy Gallery</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    body {
+      background-color: #141414;
+      color: #fff;
+      min-height: 100vh;
+      padding: 20px;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 30px;
+    }
+
+    header h1 {
+      font-size: 2rem;
+      color: #e50914;
+    }
+
+    #backButton {
+      background-color: #e50914;
+      color: white;
+      padding: 10px 15px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: background-color 0.3s ease;
+    }
+
+    #backButton:hover {
+      background-color: #b00610;
+    }
+
+    section {
+      margin-bottom: 40px;
+    }
+
+    section h2, section h4 {
+      margin-bottom: 15px;
+      padding-left: 10px;
+    }
+
+    section h2 {
+      font-size: 1.5rem;
+      border-left: 5px solid #e50914;
+    }
+
+    section h4 {
+      border-left: 5px solid #ffffff;
+    }
+
+    .gallery-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .gallery-item {
+      background-color: #222;
+      border-radius: 10px;
+      overflow: hidden;
+      transition: transform 0.3s ease;
+    }
+
+    .gallery-item:hover {
+      transform: scale(1.05);
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .info {
+      padding: 15px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .info h3 {
+      font-size: 1rem;
+      color: #fff;
+    }
+
+    .info a {
+      text-decoration: none;
+      background-color: #e50914;
+      color: white;
+      padding: 6px 12px;
+      border-radius: 4px;
+      font-size: 0.9rem;
+      transition: background-color 0.3s ease;
+    }
+
+    .info a:hover {
+      background-color: #b00610;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Apex Academy Gallery</h1>
+    <button id="backButton">⬅ Back to Apex Landing</button>
+  </header>
+
+  <section>
+    <h2>Foundation Day 2025</h2>
+    <h4>Achievers</h4>
+    <div class="gallery-container">
+
+      <!-- Achievers Gallery Items -->
+      <div class="gallery-item">
+        <img src="Img/Foundation_Day/Achivers/acv1.jpg" alt="Tanish Samanta receiving award">
+        <div class="info">
+          <h3>Tanish Samanta</h3>
+          <a href="Img/Foundation_Day/Achivers/acv1.jpg" download>Download</a>
+        </div>
+      </div>
+
+      <div class="gallery-item">
+        <img src="Img/Foundation_Day/Achivers/acv3.jpg" alt="Adrija Dey on Foundation Day">
+        <div class="info">
+          <h3>Adrija Dey</h3>
+          <a href="Img/Foundation_Day/Achivers/acv3.jpg" download>Download</a>
+        </div>
+      </div>
+
+      <div class="gallery-item">
+        <img src="Img/Foundation_Day/Achivers/acv4.jpg" alt="Samadrita Hazra with certificate">
+        <div class="info">
+          <h3>Samadrita Hazra</h3>
+          <a href="Img/Foundation_Day/Achivers/acv4.jpg" download>Download</a>
+        </div>
+      </div>
+
+      <div class="gallery-item">
+        <img src="Img/Foundation_Day/Achivers/acv5.jpg" alt="Anirudhya Roy award moment">
+        <div class="info">
+          <h3>Anirudhya Roy</h3>
+          <a href="Img/Foundation_Day/Achivers/acv5.jpg" download>Download</a>
+        </div>
+      </div>
+
+      <div class="gallery-item">
+        <img src="Img/Foundation_Day/Achivers/acv6.jpg" alt="Abhirup Deb on stage">
+        <div class="info">
+          <h3>Abhirup Deb</h3>
+          <a href="Img/Foundation_Day/Achivers/acv6.jpg" download>Download</a>
+        </div>
+      </div>
+
+      <div class="gallery-item">
+        <img src="Img/Foundation_Day/Achivers/acv7.jpg" alt="Soumojit Banik receiving prize">
+        <div class="info">
+          <h3>Soumojit Banik</h3>
+          <a href="Img/Foundation_Day/Achivers/acv7.jpg" download>Download</a>
+        </div>
+      </div>
+
+      <div class="gallery-item">
+        <img src="Img/Foundation_Day/Achivers/acv8.jpg" alt="Divanshi Ghoswami Foundation Day">
+        <div class="info">
+          <h3>Divanshi Ghoswami</h3>
+          <a href="Img/Foundation_Day/Achivers/acv8.jpg" download>Download</a>
+        </div>
+      </div>
+
+      <div class="gallery-item">
+        <img src="Img/Foundation_Day/Achivers/acv10.jpg" alt="Arya Samanta with trophy">
+        <div class="info">
+          <h3>Arya Samanta</h3>
+          <a href="Img/Foundation_Day/Achivers/acv10.jpg" download>Download</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section>
+    <h4>All Students</h4>
+    <div class="gallery-container">
+
+      <!-- All Students Gallery Items -->
+      <!-- Repeat pattern, e.g.: -->
+      <div class="gallery-item">
+        <img src="Img/Foundation_Day/Allstdns/1 (1).jpg" alt="Group photo of students">
+        <div class="info">
+          <a href="Img/Foundation_Day/Allstdns/1 (1).jpg" download>Download</a>
+        </div>
+      </div>
+
+      <div class="gallery-item">
+        <img src="Img/Foundation_Day/Allstdns/1 (2).jpg" alt="Students performing on stage">
+        <div class="info">
+          <a href="Img/Foundation_Day/Allstdns/1 (2).jpg" download>Download</a>
+        </div>
+      </div>
+
+      <!-- Add others as is... -->
+      
+    </div>
+  </section>
+
+  <section>
+    <h4>Our Teachers</h4>
+    <div class="gallery-container">
+
+      <div class="gallery-item">
+        <img src="Img/Foundation_Day/Teachers/IMG_20250413_123208.jpg" alt="Teachers group photo">
+        <div class="info">
+          <a href="Img/Foundation_Day/Teachers/IMG_20250413_123208.jpg" download>Download</a>
+        </div>
+      </div>
+
+      <div class="gallery-item">
+        <img src="Img/Foundation_Day/Teachers/IMG_20250413_124903.jpg" alt="Teachers on stage">
+        <div class="info">
+          <a href="Img/Foundation_Day/Teachers/IMG_20250413_124903.jpg" download>Download</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <script>
+    document.getElementById('backButton').addEventListener('click', () => {
+      window.location.href = "../index.html";
+    });
+  </script>
+</body>
+</html>
